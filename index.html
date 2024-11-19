@@ -22,18 +22,19 @@
             text-align: center;
         }
         h1 {
-            font-size: 1.8em;
+            font-size: 2.5em; /* Augmenté pour un meilleur affichage */
             margin-bottom: 10px;
         }
         h2 {
-            font-size: 1.3em;
+            font-size: 2em; /* Augmenté pour un meilleur affichage */
             margin-bottom: 20px;
         }
         #countdown {
-            font-size: 2.5em;
+            font-size: 3em; /* Taille ajustée pour que le compteur soit lisible sur tous les écrans */
             display: flex;
             gap: 5px;
             justify-content: center;
+            margin-top: 20px; /* Moins d'espace au-dessus du compteur */
         }
         .time-box {
             display: flex;
@@ -41,11 +42,42 @@
             align-items: center;
         }
         .time-label {
-            font-size: 0.5em;
+            font-size: 0.6em; /* Taille des labels ajustée */
             margin-bottom: 5px;
         }
         .red {
             color: red;
+        }
+
+        /* Media Queries pour adapter l'affichage sur les petits écrans */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em; /* Réduction de la taille de h1 */
+            }
+            h2 {
+                font-size: 1.6em; /* Réduction de la taille de h2 */
+            }
+            #countdown {
+                font-size: 2em; /* Réduction de la taille du compteur */
+            }
+            .time-box {
+                font-size: 1.2em; /* Réduction des éléments de temps */
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                flex-direction: column;
+            }
+            h1 {
+                font-size: 1.5em; /* Encore plus petit sur les très petits écrans */
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+            #countdown {
+                font-size: 1.5em; /* Ajustement plus fin du compteur */
+            }
         }
     </style>
 </head>
