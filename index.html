@@ -8,6 +8,7 @@
         body {
             display: flex;
             justify-content: center; /* Centrage horizontal */
+            align-items: center; /* Centrage vertical */
             height: 100vh;
             margin: 0;
             background-image: url('https://raw.githubusercontent.com/LeGrandComite/OnFaitLeStatut/main/JordanStatut2.jpg');
@@ -19,7 +20,7 @@
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
             flex-direction: column;
             text-align: center;
-            position: relative; /* Nécessaire pour le positionnement absolu du compteur */
+            padding-top: 50px; /* Espacement vers le bas */
         }
         h1 {
             font-size: 1.8em;
@@ -34,8 +35,6 @@
             display: flex;
             gap: 5px;
             justify-content: center;
-            position: absolute; /* Positionner de manière absolue */
-            bottom: 20px; /* Ajuster la position vers le bas */
         }
         .time-box {
             display: flex;
@@ -52,8 +51,11 @@
     </style>
 </head>
 <body>
-    <h1>Le Grand Comité présente</h1>
-    <h2>Le calendrier des Maussies - Édition Collector 2024</h2>
+    <div>
+        <!-- Ajout d'un espacement avant la présentation -->
+        <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Le Grand Comité présente</h1>
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Le calendrier des Maussies - Édition Collector 2024</h2>
+    </div>
     <div id="countdown">
         <div class="time-box">
             <div class="time-label">jours</div>
