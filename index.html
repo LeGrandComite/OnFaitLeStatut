@@ -8,10 +8,10 @@
         body {
             display: flex;
             justify-content: center;
-            align-items: flex-end; /* Aligne les éléments en bas de la page */
+            align-items: flex-start; /* Aligne les éléments plus bas sur la page */
             height: 100vh;
             margin: 0;
-            background-image: url('https://github.com/LeGrandComite/OnFaitLeStatut/blob/main/JordanStatut2.jpg');
+            background-image: url('https://raw.githubusercontent.com/LeGrandComite/OnFaitLeStatut/main/JordanStatut2.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -20,21 +20,20 @@
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
             flex-direction: column;
             text-align: center;
-            padding-bottom: 20px; /* Ajoute un peu d'espace au bas pour le décompte */
+            padding-top: 10%; /* Décalage de la présentation vers le bas */
         }
         h1 {
-            font-size: 2.5em;
+            font-size: 2.5em; /* Réduction de la taille de la police */
             margin-bottom: 10px;
         }
         h2 {
-            font-size: 1.5em;
+            font-size: 1.8em; /* Réduction de la taille de la police */
             margin-bottom: 20px;
         }
         #countdown {
-            font-size: 4.5em;
+            font-size: 4.5em; /* Réduction de la taille de la police */
             display: flex;
-            gap: 5px;
-            justify-content: center;
+            gap: 10px;
         }
         .time-box {
             display: flex;
@@ -42,15 +41,11 @@
             align-items: center;
         }
         .time-label {
-            font-size: 0.4em;
+            font-size: 0.5em;
             margin-bottom: 5px;
         }
         .red {
             color: red;
-        }
-        .time-box span {
-            font-size: 0.8em;
-            margin-left: 5px;
         }
     </style>
 </head>
@@ -61,18 +56,18 @@
         <div class="time-box">
             <div class="time-label">jours</div>
             <div id="days"></div>
-            <span>:</span>
         </div>
+        <span>:</span>
         <div class="time-box">
             <div class="time-label">heures</div>
             <div id="hours"></div>
-            <span>:</span>
         </div>
+        <span>:</span>
         <div class="time-box">
             <div class="time-label">minutes</div>
             <div id="minutes"></div>
-            <span>:</span>
         </div>
+        <span>:</span>
         <div class="time-box">
             <div class="time-label">secondes</div>
             <div id="seconds" class="red"></div>
