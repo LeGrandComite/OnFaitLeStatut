@@ -7,12 +7,12 @@
     <style>
         body {
             display: flex;
-            justify-content: center; /* Centrage horizontal */
+            justify-content: center;
             align-items: center; /* Centrage vertical */
             height: 100vh;
             margin: 0;
             background-image: url('https://raw.githubusercontent.com/LeGrandComite/OnFaitLeStatut/main/JordanStatut2.jpg');
-            background-size: contain;
+            background-size: contain; /* Réduit l'image pour éviter la barre de défilement */
             background-position: center;
             background-repeat: no-repeat;
             font-family: 'Comic Sans MS', cursive, sans-serif;
@@ -21,73 +21,70 @@
             flex-direction: column;
             text-align: center;
         }
+
         h1 {
-            font-size: 2.5em; /* Augmenté pour un meilleur affichage */
+            font-size: 2em; /* Taille réduite de la police */
             margin-bottom: 10px;
         }
+
         h2 {
-            font-size: 2em; /* Augmenté pour un meilleur affichage */
+            font-size: 1.5em; /* Taille réduite de la police */
             margin-bottom: 20px;
         }
+
         #countdown {
-            font-size: 3em; /* Taille ajustée pour que le compteur soit lisible sur tous les écrans */
+            font-size: 2em; /* Taille réduite du compteur */
             display: flex;
             gap: 5px;
             justify-content: center;
-            margin-top: 20px; /* Moins d'espace au-dessus du compteur */
+            margin-top: 50px; /* Ajuster l'espace au-dessus du compteur */
+            margin-bottom: 20px; /* Ajuster l'espace sous le compteur */
         }
+
         .time-box {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
+
         .time-label {
-            font-size: 0.6em; /* Taille des labels ajustée */
+            font-size: 0.4em; /* Taille réduite du label */
             margin-bottom: 5px;
         }
+
         .red {
             color: red;
         }
 
-        /* Media Queries pour adapter l'affichage sur les petits écrans */
+        /* Media Queries pour adapter la taille de la police sur petits écrans */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2em; /* Réduction de la taille de h1 */
+                font-size: 1.8em;
             }
             h2 {
-                font-size: 1.6em; /* Réduction de la taille de h2 */
+                font-size: 1.3em;
             }
             #countdown {
-                font-size: 2em; /* Réduction de la taille du compteur */
-            }
-            .time-box {
-                font-size: 1.2em; /* Réduction des éléments de temps */
+                font-size: 1.8em;
             }
         }
 
         @media (max-width: 480px) {
-            body {
-                flex-direction: column;
-            }
             h1 {
-                font-size: 1.5em; /* Encore plus petit sur les très petits écrans */
+                font-size: 1.5em;
             }
             h2 {
-                font-size: 1.2em;
+                font-size: 1.1em;
             }
             #countdown {
-                font-size: 1.5em; /* Ajustement plus fin du compteur */
+                font-size: 1.5em;
             }
         }
     </style>
 </head>
 <body>
-    <div>
-        <!-- Sauts de ligne supplémentaires pour abaisser la présentation -->
-        <br><br><br><br><br><br><br> <!-- 7 sauts de ligne pour abaisser la présentation -->
-        <h1>Le Grand Comité présente</h1>
-        <h2>Le calendrier des Maussies - Édition Collector 2024</h2>
-    </div>
+    <h1>Le Grand Comité présente</h1>
+    <h2>Le calendrier des Maussies - Édition Collector 2024</h2>
     <div id="countdown">
         <div class="time-box">
             <div class="time-label">jours</div>
