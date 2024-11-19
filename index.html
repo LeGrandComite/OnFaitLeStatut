@@ -8,7 +8,6 @@
         body {
             display: flex;
             justify-content: center; /* Centrage horizontal */
-            align-items: flex-end; /* Centrage vertical vers le bas */
             height: 100vh;
             margin: 0;
             background-image: url('https://raw.githubusercontent.com/LeGrandComite/OnFaitLeStatut/main/JordanStatut2.jpg');
@@ -20,22 +19,23 @@
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
             flex-direction: column;
             text-align: center;
+            position: relative; /* Nécessaire pour le positionnement absolu du compteur */
         }
         h1 {
-            font-size: 1.8em; /* Taille réduite de la police */
+            font-size: 1.8em;
             margin-bottom: 10px;
         }
         h2 {
-            font-size: 1.3em; /* Taille réduite de la police */
+            font-size: 1.3em;
             margin-bottom: 20px;
         }
         #countdown {
-            font-size: 2.5em; /* Taille réduite du compteur */
+            font-size: 2.5em;
             display: flex;
             gap: 5px;
             justify-content: center;
-            margin-top: 50px; /* Ajuster l'espace au-dessus du compteur */
-            margin-bottom: 20px; /* Ajuster l'espace sous le compteur */
+            position: absolute; /* Positionner de manière absolue */
+            bottom: 20px; /* Ajuster la position vers le bas */
         }
         .time-box {
             display: flex;
@@ -43,7 +43,7 @@
             align-items: center;
         }
         .time-label {
-            font-size: 0.5em; /* Taille réduite du label */
+            font-size: 0.5em;
             margin-bottom: 5px;
         }
         .red {
