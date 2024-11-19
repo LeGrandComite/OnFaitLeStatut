@@ -1,0 +1,76 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le calendrier des Maussies - Édition Collector 2024</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://github.com/LeGrandComite/OnFaitLeStatut/blob/main/JordanStatut.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            flex-direction: column;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        #countdown {
+            font-size: 4em;
+        }
+        .time-label {
+            font-size: 0.5em;
+        }
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Le Grand Comité présente</h1>
+    <h2>Le calendrier des Maussies - Édition Collector 2024</h2>
+    <div id="countdown">
+        <span id="days"></span> <span class="time-label">jours</span> :
+        <span id="hours"></span> <span class="time-label">heures</span> :
+        <span id="minutes"></span> <span class="time-label">minutes</span> :
+        <span id="seconds" class="red"></span> <span class="time-label">secondes</span>
+    </div>
+
+    <script>
+        // Définir la date cible (1er décembre à minuit)
+        const targetDate = new Date('December 1, 2024 00:00:00').getTime();
+
+        // Mettre à jour le décompte toutes les secondes
+        const countdown = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            // Calcul des jours, heures, minutes et secondes
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Afficher les résultats dans les éléments correspondants
+            document.getElementById('days').innerText = days;
+            document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+
+            // Si le décompte est terminé, redirection vers une autre page
+            if (distance < 0) {
+                clearInterval(countdown);
+                window.location.href = "https://www.meteobelgique.be"; // Remplace par l'URL de redirection souhaitée
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
